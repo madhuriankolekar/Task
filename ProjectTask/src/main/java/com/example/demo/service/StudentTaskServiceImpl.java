@@ -50,9 +50,9 @@ public class StudentTaskServiceImpl implements StudentTaskService{
         }
         return studentRepository.findAll();
     }
-	 public List<StudentTask> getByKeyword(String email){
-		 if (email != null) {
-	            return studentRepository.search(email);
+	 public List<StudentTask> getByKeyword(String taskname){
+		 if (taskname != null) {
+	            return studentRepository.search(taskname);
 	        }
 	        return studentRepository.findAll();
 	}

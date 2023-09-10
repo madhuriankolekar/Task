@@ -72,8 +72,8 @@
 				 
 <div class="container mt-5">
 <h2 align="center">Search Student Task</h2>
- <form th:action="@{/search/{email}}" placeholder="Enter Student Email" >
-    Filter: <input type="text" name="email"  firstName="firstName"  size="50" th:value="${email}" placeholder="Enter Email" required />
+ <form th:action="@{/search/{taskname}}" placeholder="Enter Student Email" >
+    Filter: <input type="text" name="taskname"  firstName="firstName"  size="50" th:value="${email}" placeholder="Enter taskname" required />
    
     &nbsp;
     <input type="submit" value="Search" />

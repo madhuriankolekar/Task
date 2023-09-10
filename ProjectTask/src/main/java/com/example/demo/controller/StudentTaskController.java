@@ -56,7 +56,7 @@ public class StudentTaskController {
 		existingStudent.setFirstName(student.getFirstName());
 		existingStudent.setLastName(student.getLastName());
 		existingStudent.setEmail(student.getEmail());
-		existingStudent.setEmail(student.getTaskdescription());
+		existingStudent.setTaskdescription(student.getTaskdescription());
 		existingStudent.setTaskname(student.getTaskname());
 		studentService.updateStudent(existingStudent);
 		return "redirect:/students";		
@@ -68,10 +68,10 @@ public class StudentTaskController {
 		return "redirect:/students";
 	}
 
-	@GetMapping("/search/{email}")
-	 public String home(StudentTask shop, Model model, @Param("email") String email) {
-	  if(email!=null) {
-	   List<StudentTask> list = studentService.getByKeyword(email);
+	@GetMapping("/search/{taskname}")
+	 public String home(StudentTask shop, Model model, @Param("taskname") String taskname) {
+	  if(taskname!=null) {
+	   List<StudentTask> list = studentService.getByKeyword(taskname);
 	   model.addAttribute("list", list);
 	  }else {
 	  List<StudentTask> list = studentService.getAllStudents();

@@ -20,6 +20,6 @@ public interface StudentTaskService {
 	void deleteStudentById(Long id);
 
 	List<StudentTask> listAll(String email);
-	public List<StudentTask> getByKeyword(String email);
+	public List<StudentTask> getByKeyword(String taskname);
 	
 }

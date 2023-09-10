@@ -9,6 +9,6 @@ import com.example.demo.entity.StudentTask;
 
 
 public interface StudentTaskRepository extends JpaRepository<StudentTask, Long>{
-	@Query("SELECT p FROM StudentTask p WHERE CONCAT(p.email) LIKE %?1%")
-	public List<StudentTask> search(String email);
+	@Query("SELECT p FROM StudentTask p WHERE CONCAT(p.taskname) LIKE %?1%")
+	public List<StudentTask> search(String taskname);
 }
